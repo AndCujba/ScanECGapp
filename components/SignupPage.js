@@ -1,31 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/core';
 import {
-SafeAreaView,
-ScrollView,
-StatusBar,
 StyleSheet,
 Text,
-useColorScheme,
 View,
 TextInput,
 TouchableOpacity,
 Image,
 } from 'react-native';
 
-import {
-Colors,
-DebugInstructions,
-Header,
-LearnMoreLinks,
-ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+
 import { auth } from '../firebase'; 
 
 
 const SignupPage =  () => {
       
-    // const [name, setName] = useState('')
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -67,13 +57,13 @@ const SignupPage =  () => {
           margin: 0,
         }} />
 
-    {/* <View style={styles.inputView}>
+    <View style={styles.inputView}>
       <TextInput
         style={styles.inputText}
         placeholder="Your Name"
         placeholderTextColor="#003f5c"
         onChangeText={text => setName(text)}/>
-    </View> */}
+    </View>
     <View style={styles.inputView}>
       <TextInput
         style={styles.inputText}
